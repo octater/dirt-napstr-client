@@ -1,0 +1,66 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6">
+      <table class="table table-sm" id="response-list-table">
+        <thead>
+          <tr>
+            <th>Raw Response Data</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each responses as |response|}}
+          <tr data-id="{{response.id}}">
+            {{#if response.text}}
+            <td>{{response.text}}</td>
+            {{/if}}
+            {{#if response.rating}}
+            <td>{{response.rating}}</td>
+            {{else}}
+            <td>{{response.boolean}}</td>
+            {{/if}}
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+      <div class="col-xs-6">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              {{#each responses as |response|}}
+              {{#if @last }}
+              <h3> Total Number of Reponse: {{count @index}}</h3>
+              {{/if}}
+              {{/each}}
+            </div>
+            <div class="modal-body">
+              <div>
+                <div id="text-response-data">
+                  <div id="boolean-response-data">
+                    <div id="number-response-data">
+                      <table class="table table-sm" id="response-list-table">
+                        <thead>
+                          <tr>
+                            <th>Response</th>
+                            <th># of Occurrences</th>
+                            <th>% of Occurrences</th>
+                          </tr>
+                        </thead class="numberResponseData">
+                        <tbody class="textResponseInfo booleanResponseData1 numberResponseData1"></tbody>
+                        <tbody class="booleanResponseData2 numberResponseData2"></tbody>
+                        <tbody class="numberResponseData3"></tbody>
+                        <tbody class="numberResponseData4"></tbody>
+                        <tbody class="numberResponseData5"></tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-header">
+                  <div class="ratingAverage"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
