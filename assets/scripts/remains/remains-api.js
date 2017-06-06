@@ -22,16 +22,6 @@ const createRemain = (data) => {
     }
   }
 
-//   return $.ajax({
-//     method: 'POST',
-//     url: config.apiOrigin + '/games/',
-//     headers: {
-//       Authorization: 'Token token=' + player1.user.token
-//     },
-//     data
-//   })
-// }
-
   return $.ajax({
     url: config.apiOrigin + '/remains',
     method: 'POST',

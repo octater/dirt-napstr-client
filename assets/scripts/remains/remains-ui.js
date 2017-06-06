@@ -46,9 +46,9 @@ const updateRemainFailure = (error) => {
 const getRemainsSuccess = (data) => {
   $('#remains-content').hide()
   $('#remains-content-text').hide()
-  // console.log(data)
-  // console.log(data.remains)
-  // console.log(data.remains.length)
+  console.log(data)
+  console.log(data.remains)
+  console.log(data.remains.length)
   // if (data.remains.length !== undefined)
   if (data.remains[0] !== undefined) {
     const showRemainsHtml = showRemainsTemplate({ remains: data.remains })
@@ -60,7 +60,7 @@ const getRemainsSuccess = (data) => {
   } else {
     store.remains = data.remains
     $('#remains-content-text').show()
-    $('#remains-content-text').text('you have no gravesite data (╯°□°）╯︵ ┻━┻')
+    $('#remains-content-text').text('you have no gravesite entries (◕︵◕)')
   }
 }
 
