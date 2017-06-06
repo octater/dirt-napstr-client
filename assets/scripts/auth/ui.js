@@ -35,18 +35,18 @@ const signInSuccess = (data) => {
   // console.log('sign in token = ', data.user.token)
   $('#signUpModal').hide()
   $('#signInModal').hide()
-  $('#title-message').html('Survey Creation Tool')
+  $('#title-message').html('Dirt Napstr')
   // $('.nav-message').hide()
   $('#ChangePasswordSuccess').hide()
   $('#change-password').trigger('reset')
   $('.nav-btns').show()
 // show main page buttons
-  $('.create-a-survey').show()
-  $('.update-a-survey').show()
-  $('.get-surveys').show()
-  $('#survey-list-table').show()
-  $('#get-survey-button').show()
-  $('#add-survey-button').show()
+  $('.create-a-remain').show()
+  $('.update-a-remain').show()
+  $('.get-remains').show()
+  $('#remain-list-table').show()
+  $('#get-remain-button').show()
+  $('#add-remain-button').show()
 }
 
 const signInFailure = (error) => {
@@ -68,9 +68,9 @@ const signOutSuccess = () => {
   $('#signUpModal').trigger('reset')
   $('#signInModal').trigger('reset')
   $('#signInModal').show()
-  $('#survey-list-table').hide()
-  $('#get-survey-button').hide()
-  $('#add-survey-button').hide()
+  $('#remain-list-table').hide()
+  $('#get-remain-button').hide()
+  $('#add-remain-button').hide()
   $('.list-group').empty()
 }
 

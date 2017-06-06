@@ -163,55 +163,55 @@
 
 <!-- END AUTHENTICATION MODALS  -->
 
-<div class="create-a-survey">
-  <button id="add-survey-button" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#createSurvey">
-    Create Survey
+<div class="create-a-remain">
+  <button id="add-remain-button" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#createRemain">
+    Create Remain
   </button>
 </div>
 
-<!-- <div class="update-a-survey">
-  <button id="update-survey-button" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#updateSurvey">
-    Modify Survey
+<!-- <div class="update-a-remain">
+  <button id="update-remain-button" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#updateRemain">
+    Modify Remain
   </button>
 </div> -->
 
-<div class="get-surveys">
-  <button id="get-survey-button" class="btn btn-primary btn-lg" type="button"  data-target="#">
-    Get Surveys
+<div class="get-remains">
+  <button id="get-remain-button" class="btn btn-primary btn-lg" type="button"  data-target="#">
+    Get Remains
   </button>
 </div>
 
-<!-- Create Survey Modal -->
+<!-- Create Remain Modal -->
 
 </div>
 
-<!-- Create Survey Modal -->
-  <div id="createSurvey" class="modal fade container-fluid" tabindex="-1" role="dialog">
+<!-- Create Remain Modal -->
+  <div id="createRemain" class="modal fade container-fluid" tabindex="-1" role="dialog">
   <div class="modal-dialog">
   <div class="modal-content">
     <div class="modal-header">
       <div class="form-title mdl-card__title">
-        <h3 class="form-header">Create Survey</h3>
+        <h3 class="form-header">Create Remain</h3>
       </div>
     </div>
     <div class="modal-body">
 
-      <form id="create-survey" class="form-horizontal">
+      <form id="create-remain" class="form-horizontal">
         <fieldset>
             <div class="input-group">
               <div class="col-sm-12">
-                <span class="input-group-addon " id="survey-title">Survey Title</span>
-                <input type="text" name="survey[title]" id="title" class="form-control" placeholder="Enter Survey Title Here ..." aria-describedby="basic-addon1" required>
+                <span class="input-group-addon " id="remain-title">Remain Title</span>
+                <input type="text" name="remain[title]" id="title" class="form-control" placeholder="Enter Remain Title Here ..." aria-describedby="basic-addon1" required>
               </div>
 
               <div class="col-sm-12">
-                <span class="input-group-addon" id="survey-q1">Survey Question</span>
-                <input type="text" name="survey[question]" id="q1" class="form-control" placeholder="What is your question?" aria-describedby="basic-addon1" required>
+                <span class="input-group-addon" id="remain-q1">Remain Question</span>
+                <input type="text" name="remain[question]" id="q1" class="form-control" placeholder="What is your question?" aria-describedby="basic-addon1" required>
               </div>
 
               <div class="col-sm-12">
                 <span class="input-group-addon" id="expected-response-type">Expected response type...</span>
-                <select id="response-type" name="survey[response_type]" class="form-control" required>
+                <select id="response-type" name="remain[response_type]" class="form-control" required>
                   <option value="" disabled  hidden>Select expected response type...</option>
                   <option value="String">Text response</option>
                   <option value="Boolean">Response of only "Yes" or "No"</option>
@@ -221,7 +221,7 @@
             </div>
             <div class="padding"></div>
 
-            <button type="submit" class="btn btn-primary btn-block" id= "create_survey">Create Survey</button>
+            <button type="submit" class="btn btn-primary btn-block" id= "create_remain">Create Remain</button>
             <div class="padding"></div>
 
             <button type="button" class="btn btn-resolved btn-block" data-dismiss="modal">Close</button>
@@ -232,40 +232,40 @@
   </div>
   </div>
 
-  <!-- End of Create Survey Modal -->
+  <!-- End of Create Remain Modal -->
 
 
 
-    <div id="updateSurvey" class="modal fade" role="dialog">
+    <div id="updateRemain" class="modal fade" role="dialog">
           <div class="modal-dialog">
 
             <div class="modal-content">
               <div class="modal-header">
-                <h4 class="modal-title">Update Survey</h4>
+                <h4 class="modal-title">Update Remain</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
               <div class="modal-body">
 
-                <form id="update-survey">
+                <form id="update-remain">
                 <fieldset>
                   <div class="form-group">
                     <div class="col-sm-10 hideMe">
-                      <span class="input-group-addon"  id="survey-id"></span>
-                      <input type="text" name="survey[id]" id="surveyId" class="form-control" hidden placeholder="Survey ID" aria-describedby="basic-addon1" required>
+                      <span class="input-group-addon"  id="remain-id"></span>
+                      <input type="text" name="remain[id]" id="remainId" class="form-control" hidden placeholder="Remain ID" aria-describedby="basic-addon1" required>
                     </div>
                     <div class="col-sm-10">
-                      <span class="input-group-addon"  id="survey-title"></span>
-                      <input type="text" name="survey[title]" id="surveyTitle" class="form-control" placeholder="Survey Title" aria-describedby="basic-addon1" required>
+                      <span class="input-group-addon"  id="remain-title"></span>
+                      <input type="text" name="remain[title]" id="remainTitle" class="form-control" placeholder="Remain Title" aria-describedby="basic-addon1" required>
                     </div>
                     <div class="col-sm-10">
-                        <span class="input-group-addon" id="survey-q1"></span>
-                      <input type="text" name="survey[question]" id="surveyQ1" class="form-control" placeholder="Question 1" aria-describedby="basic-addon1" required>
+                        <span class="input-group-addon" id="remain-q1"></span>
+                      <input type="text" name="remain[question]" id="remainQ1" class="form-control" placeholder="Question 1" aria-describedby="basic-addon1" required>
                     </div>
                   </div>
                   <br>
-                  <button type="submit" class="btn btn-primary" id= "update_survey">Update Survey</button>
+                  <button type="submit" class="btn btn-primary" id= "update_remain">Update Remain</button>
                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </fieldset>
                 <br>
@@ -274,10 +274,10 @@
             </div>
           </div>
         </div>
-        <!-- surveys content -->
-        <!-- surveys content -->
-          <div class="list-group" id ="surveys-content"></div>
-          <div class="list-group" id ="surveys-content-text"></div>
+        <!-- remains content -->
+        <!-- remains content -->
+          <div class="list-group" id ="remains-content"></div>
+          <div class="list-group" id ="remains-content-text"></div>
         <!-- responses content -->
           <div class="list-group" id ="responses-content"></div>
           <div class="list-group" id ="responses-content-text"></div>
@@ -290,8 +290,8 @@
   <!-- respondents handlebars -->
   <div id="respondents" class="container col-md-12 dynamic-content">
     <div id="jumbotron-top" class="jumbotron jumbotron-fluid">
-      <h2 id="title-message" class="title_message ">Survey Response</h2>
-      <h1 id="default-display-text" class="surveys-title"></h1>
+      <h2 id="title-message" class="title_message ">Remain Response</h2>
+      <h1 id="default-display-text" class="remains-title"></h1>
       <div class="jumbotron-msg container push-spaces">
         <p></div>
       </div>
@@ -309,9 +309,9 @@
 
       <tbody>
           <tr>
-            <td id="survey_question"></td>
+            <td id="remain_question"></td>
           <!-- Create Response -->
-            <td id="survey_response">
+            <td id="remain_response">
               <div class="input-group">
                 <form id="create-response" novalidate>
                   <fieldset>
@@ -351,7 +351,7 @@
                       <input type="submit" disabled class="btn btn-primary" id= "res-boolean-create_response">
                     </div>
 
-                    <!-- <td id="survey_response_button_col"> -->
+                    <!-- <td id="remain_response_button_col"> -->
                       <!-- <input type="submit" disabled class="btn btn-primary" id= "create_response"> -->
                     <!-- </td> -->
                     <div class="errors-create-response" > </div>

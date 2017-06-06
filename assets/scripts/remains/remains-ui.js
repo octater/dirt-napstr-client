@@ -74,12 +74,12 @@ const getRemainsFailure = (error) => {
 //   console.log(data.responses[0])
 //   console.log('text:', data.responses[0].text)
 //   console.log('title:', data.responses[0].title)
-//   console.log('survey_id:', data.responses[0].survey_id)
+//   console.log('remain_id:', data.responses[0].remain_id)
 //   console.log('question_id:', data.responses[0].question_id)
 //   console.log('respondent_id:', data.responses[0].respondent_id)
-//   const showSurveysHtml = showSurveysTemplate({ responses: data.responses })
+//   const showRemainsHtml = showRemainsTemplate({ responses: data.responses })
 //   // debugger;
-//   $('.content').html(showSurveysHtml) // .order
+//   $('.content').html(showRemainsHtml) // .order
 //   // $('.errors-create-item').empty()
 //   // $('#create-item').show()
 //   // $('#spacer1').text('List')
@@ -92,12 +92,12 @@ const getRemainsFailure = (error) => {
 const getDynamicRemainsSuccess = (data) => {
   // store.user = data.user
   // console.log(data)
-  // console.log(data.surveys[0])
-  // console.log('title:', data.surveys[0].title)
-  // console.log('url:', data.surveys[0].url)
-  // console.log('_owner:', data.surveys[0]._owner)
-  // console.log('length:', data.surveys[0].length)
-  // console.log('length:', data.surveys[0].question)
+  // console.log(data.remains[0])
+  // console.log('title:', data.remains[0].title)
+  // console.log('url:', data.remains[0].url)
+  // console.log('_owner:', data.remains[0]._owner)
+  // console.log('length:', data.remains[0].length)
+  // console.log('length:', data.remains[0].question)
   const showRemainsHtml = showRemainsTemplate({ remains: data.remains })
   // debugger;
   $('.dynamic-content').html(showRemainsHtml) // .order

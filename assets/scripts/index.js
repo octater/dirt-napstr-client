@@ -3,10 +3,10 @@
 const setAPIOrigin = require('../../lib/set-api-origin')
 const config = require('./config')
 const authEvents = require('./auth/events.js')
-const surveyEvents = require('./survey/survey-events.js')
-// on document ready return surveys
-const api = require('./survey/survey-api')
-const ui = require('./survey/survey-ui')
+const remainEvents = require('./remains/remains-events.js')
+// on document ready return remains
+const api = require('./remains/remains-api')
+const ui = require('./remains/remains-ui')
 
 // response:
 const responseEvents = require('./response/events')
@@ -32,19 +32,19 @@ $(() => {
     $('#signUpError').hide()
     $('#signUpSuccess').hide()
   })
-  $('#createSurvey').on('hidden.bs.modal', function () {
+  $('#createRemain').on('hidden.bs.modal', function () {
     $(this).find('input,textarea,select').val('').end()
   })
 
   authEvents.addHandlers()
-  surveyEvents.addHandlers()
+  remainEvents.addHandlers()
   responseEvents.addHandlers()
   $('.form-control').val('')  // This clears out all the form input fields when the document is first loaded
   $('#signUpModal').hide()
   $('.nav-btns').hide()
-  $('.create-a-survey').hide()
-  $('.update-a-survey').hide()
-  $('.get-surveys').hide()
+  $('.create-a-remain').hide()
+  $('.update-a-remain').hide()
+  $('.get-remains').hide()
 })
 
 // query parameters from URL
@@ -52,13 +52,13 @@ $(document).ready(function () {
   $('input:radio').attr('checked', false)
   $('input[typed="radio"]').removeAttr('checked')
 // Check if the URL parameter is apples
-  const dc = surveyEvents.dynamicContent
+  const dc = remainEvents.dynamicContent
   // console.log(dc)
   if (dc[0] === 'respondents' && dc[1] !== undefined) { // Check if the URL parameter is bananas
     $('#respondents').show()
-    api.getOneDynamicSurvey(dc[1])
-      .then(ui.getOneDynamicSurveySuccess)
-      .catch(ui.getOneDynamicSurveyFailure)
+    api.getOneDynamicRemain(dc[1])
+      .then(ui.getOneDynamicRemainSuccess)
+      .catch(ui.getOneDynamicRemainFailure)
     // Check if the URL parmeter is empty or not defined, display default content
   } else {
     $('#default-content').show()

@@ -6,7 +6,7 @@ const showResponsesTemplate = require('../templates/response.handlebars')
 const createResponseSuccess = (data) => {
   // console.log('createResponseSuccess')
   $('#response-list-table').hide()
-  $('#default-display-text').text('Thanks for taking the survey! ¯\\_(ツ)_/¯')
+  $('#default-display-text').text('Thanks for taking the remain! ¯\\_(ツ)_/¯')
 }
 
 const createResponseFailure = () => {
@@ -150,7 +150,7 @@ const getResponsesSuccess = (data) => {
         const ratingaverage = (totalRatingCount / total)
         const ratingAverage = parseFloat(ratingaverage).toFixed(2)
 
-        $(`.ratingAverage`).text(`Average Rating for this Survey Question: ${ratingAverage} `)
+        $(`.ratingAverage`).text(`Average Rating for this Remain Question: ${ratingAverage} `)
       }
 
       if (data.responses[i].rating) {

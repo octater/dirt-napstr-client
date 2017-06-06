@@ -1,8 +1,8 @@
 'use strict'
 
 const getFormFields = require(`../../../lib/get-form-fields`)
-const api = require('./remain-api')
-const ui = require('./remain-ui')
+const api = require('./remains-api')
+const ui = require('./remains-ui')
 // const authUi = require('../auth/ui')
 const store = require('../store')
 
@@ -94,7 +94,7 @@ function getParameterByName () {
       return e.split('=')[1]
     })
     // console.log('array: ', arr)
-    // console.log('survey_id: ', arr[1])
+    // console.log('remain_id: ', arr[1])
     // console.log('parameters, will load Respondent Page')
     return arr
   }

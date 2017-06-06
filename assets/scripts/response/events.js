@@ -23,7 +23,7 @@ const onCreateResponse = function (event) {
       'text': textData,
       'boolean': booleanData,
       'rating': ratingData,
-      'survey_id': $(this).attr('data-id')
+      'remain_id': $(this).attr('data-id')
     }
   }
 
@@ -38,7 +38,7 @@ const onGetResponses = function (event) {
   event.preventDefault()
   let string = {}
   string = { // should this be a constructor function to have one for each play?
-    'survey_id': this.id
+    'remain_id': this.id
   }
   // console.log('string ', string)
   api.getResponses(string)
