@@ -5,7 +5,15 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import url('https://fonts.googleapis.com/css?family=Creepster');
 
 $font-family: 'Creepster', cursive;
+$grey: #eeeeee;
 
+// html {
+//   background: url(../../images/background.jpg) no-repeat center center fixed;
+//   -webkit-background-size: cover;
+//   -moz-background-size: cover;
+//   -o-background-size: cover;
+//   background-size: cover;
+// }
 // Hide the dynamic-content remain by default
 .dynamic-content {
     display:none;
@@ -15,10 +23,12 @@ $font-family: 'Creepster', cursive;
 body {
   // color: #dfdfdf;
   font-color: #000000;
+  // font-color: $grey;
   font-family: $font-family;
   margin: auto;
+  // opacity:0.5 !important;
   width: 550px;
-  // background-image: url(./images/stars-and-tent.jpg);
+  background-image: url(../../images/background.jpg);
 }
 
 #title-message {
@@ -34,8 +44,8 @@ body {
   padding: 20px;
   text-align: center;
   position: relative;
-  z-index: 2;
-  box-shadow: 0 8px 16px -6px blue;
+  // z-index: 2;
+  // box-shadow: 0 8px 16px -6px blue;
 }
 
 #jumbotron-list {
@@ -169,7 +179,7 @@ body {
 }
 
 .title_message {
-  border-bottom: 1px solid #000;
+  // border-bottom: 1px solid #000;
   color: #0000ff;
   font-family: $font-family;
   font-size: 55px;
@@ -196,4 +206,10 @@ body {
 .hideMe {
   display: none;
   font-family: $font-family;
+}
+
+#remain-list-table {
+  // font-family: $font-family;
+  // font-size: 20px;
+  color: red;
 }
