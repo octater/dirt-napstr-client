@@ -165,7 +165,7 @@
 
 <div class="create-a-remain">
   <button id="add-remain-button" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#createRemain">
-    Create Remain
+    Create Gravesite
   </button>
 </div>
 
@@ -191,7 +191,7 @@
   <div class="modal-content">
     <div class="modal-header">
       <div class="form-title mdl-card__title">
-        <h3 class="form-header">Create Remain</h3>
+        <h3 class="form-header">Create Gravesite</h3>
       </div>
     </div>
     <div class="modal-body">
@@ -200,28 +200,54 @@
         <fieldset>
             <div class="input-group">
               <div class="col-sm-12">
-                <span class="input-group-addon " id="remain-title">Remain Title</span>
-                <input type="text" name="remain[title]" id="title" class="form-control" placeholder="Enter Remain Title Here ..." aria-describedby="basic-addon1" required>
+                <span class="input-group-addon " id="remain-given-name">Given Name</span>
+                <input type="text" name="remain[givenName]" id="given-name" class="form-control" placeholder="Enter given name here ..." aria-describedby="basic-addon1" required>
               </div>
 
               <div class="col-sm-12">
-                <span class="input-group-addon" id="remain-q1">Remain Question</span>
-                <input type="text" name="remain[question]" id="q1" class="form-control" placeholder="What is your question?" aria-describedby="basic-addon1" required>
+                <span class="input-group-addon " id="remain-sur-name">Sur Name</span>
+                <input type="text" name="remain[surName]" id="sur-name" class="form-control" placeholder="Enter sur name here ..." aria-describedby="basic-addon1" required>
               </div>
 
               <div class="col-sm-12">
-                <span class="input-group-addon" id="expected-response-type">Expected response type...</span>
-                <select id="response-type" name="remain[response_type]" class="form-control" required>
-                  <option value="" disabled  hidden>Select expected response type...</option>
-                  <option value="String">Text response</option>
-                  <option value="Boolean">Response of only "Yes" or "No"</option>
-                  <option value="Number">Rating Response : on a scale from 1 - 5</option>
+                <span class="input-group-addon" id="remain-entombment">Entombment type...</span>
+                <select id="entombment-type" name="remain[entombment]" class="form-control" required>
+                  <option value="" disabled  hidden>Select expected entombment type...</option>
+                  <option value="cemetary">cemetary</option>
+                  <option value="cremated">cremated</option>
+                  <option value="other">other</option>
                 </select>
               </div>
+
+              <div class="col-sm-12">
+                <span class="input-group-addon" id="remain-location">Final Resting Place</span>
+                <input type="text" name="remain[location]" id="location" class="form-control" placeholder="Enter final resting place here ..." aria-describedby="basic-addon1" required>
+              </div>
+
+              <div class="col-sm-12">
+                <span class="input-group-addon" id="remain-comments">Final Resting Place Addl Comments</span>
+                <input type="text" name="remain[comments]" id="comments" class="form-control" placeholder="Enter any addl comments here ..." aria-describedby="basic-addon1" required>
+              </div>
+
+              <div class="col-sm-12">
+                <span class="input-group-addon" id="remain-dob">Date of Birth</span>
+                <input type="text" name="remain[dob]" id="dob" class="form-control" placeholder="Enter date of birth here ..." aria-describedby="basic-addon1" required>
+              </div>
+
+              <div class="col-sm-12">
+                <span class="input-group-addon" id="remain-dod">Date of Demise</span>
+                <input type="text" name="remain[dod]" id="dod" class="form-control" placeholder="Enter date of demise here ..." aria-describedby="basic-addon1" required>
+              </div>
+
+              <div class="col-sm-12">
+                <span class="input-group-addon" id="remain-rel-desc">Relationship</span>
+                <input type="text" name="remain[relationDesc]" id="rel-desc" class="form-control" placeholder="Enter relationship description here ..." aria-describedby="basic-addon1" required>
+              </div>
+
             </div>
             <div class="padding"></div>
 
-            <button type="submit" class="btn btn-primary btn-block" id= "create_remain">Create Remain</button>
+            <button type="submit" class="btn btn-primary btn-block" id= "create_remain">Create Entry</button>
             <div class="padding"></div>
 
             <button type="button" class="btn btn-resolved btn-block" data-dismiss="modal">Close</button>
