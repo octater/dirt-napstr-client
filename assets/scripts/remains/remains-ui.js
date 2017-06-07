@@ -68,7 +68,7 @@ const getRemainsSuccess = (data) => {
   } else {
     store.remains = data.remains
     $('#remains-content-text').show()
-    $('#remains-content-text').text('you have no gravesite entries (◕︵◕)')
+    $('#remains-content-text').text('Sorry, no gravesites found (◕︵◕)')
   }
 }
 
@@ -97,59 +97,59 @@ const getRemainsFailure = (error) => {
 //   console.error(error)
 // }
 
-const getDynamicRemainsSuccess = (data) => {
-  // store.user = data.user
-  // console.log(data)
-  // console.log(data.remains[0])
-  // console.log('title:', data.remains[0].title)
-  // console.log('url:', data.remains[0].url)
-  // console.log('_owner:', data.remains[0]._owner)
-  // console.log('length:', data.remains[0].length)
-  // console.log('length:', data.remains[0].question)
-  const showRemainsHtml = showRemainsTemplate({ remains: data.remains })
-  // debugger;
-  $('.dynamic-content').html(showRemainsHtml) // .order
-  // $('.errors-create-item').empty()
-  // $('#create-item').show()
-  // $('#spacer1').text('List')
-}
+// const getDynamicRemainsSuccess = (data) => {
+//   // store.user = data.user
+//   // console.log(data)
+//   // console.log(data.remains[0])
+//   // console.log('title:', data.remains[0].title)
+//   // console.log('url:', data.remains[0].url)
+//   // console.log('_owner:', data.remains[0]._owner)
+//   // console.log('length:', data.remains[0].length)
+//   // console.log('length:', data.remains[0].question)
+//   const showRemainsHtml = showRemainsTemplate({ remains: data.remains })
+//   // debugger;
+//   $('.dynamic-content').html(showRemainsHtml) // .order
+//   // $('.errors-create-item').empty()
+//   // $('#create-item').show()
+//   // $('#spacer1').text('List')
+// }
+//
+// const getDynamicRemainsFailure = (error) => {
+//   console.error(error)
+// }
 
-const getDynamicRemainsFailure = (error) => {
-  console.error(error)
-}
+// const getOneDynamicRemainSuccess = (data) => {
+//   // store.user = data.user
+//   // console.log(data)
+//   // console.log(data.remain)
+//   $('#default-display-text').text(data.remain.title)
+//   // $('#remain_id').html(data.remain.id)
+//   // $('#remain_id').val(data.remain.id)
+//   $('#create-response').attr('data-id', data.remain.id)
+//   // console.log('innerHTML: ', $('#create-response').attr('data-id'))
+//   $('#remain_question').text(data.remain.question)
+//   // $('#remain_owner').text(data.remain._owner)
+//
+//   if (data.remain.response_type === 'Number') {
+//     $('#res-number').show()
+//     $('#res-string').hide()
+//     $('#res-boolean').hide()
+//   }
+//   if (data.remain.response_type === 'String') {
+//     $('#res-number').hide()
+//     $('#res-string').show()
+//     $('#res-boolean').hide()
+//   }
+//   if (data.remain.response_type === 'Boolean') {
+//     $('#res-number').hide()
+//     $('#res-string').hide()
+//     $('#res-boolean').show()
+//   }
+// }
 
-const getOneDynamicRemainSuccess = (data) => {
-  // store.user = data.user
-  // console.log(data)
-  // console.log(data.remain)
-  $('#default-display-text').text(data.remain.title)
-  // $('#remain_id').html(data.remain.id)
-  // $('#remain_id').val(data.remain.id)
-  $('#create-response').attr('data-id', data.remain.id)
-  // console.log('innerHTML: ', $('#create-response').attr('data-id'))
-  $('#remain_question').text(data.remain.question)
-  // $('#remain_owner').text(data.remain._owner)
-
-  if (data.remain.response_type === 'Number') {
-    $('#res-number').show()
-    $('#res-string').hide()
-    $('#res-boolean').hide()
-  }
-  if (data.remain.response_type === 'String') {
-    $('#res-number').hide()
-    $('#res-string').show()
-    $('#res-boolean').hide()
-  }
-  if (data.remain.response_type === 'Boolean') {
-    $('#res-number').hide()
-    $('#res-string').hide()
-    $('#res-boolean').show()
-  }
-}
-
-const getOneDynamicRemainFailure = (error) => {
-  console.error(error)
-}
+// const getOneDynamicRemainFailure = (error) => {
+//   console.error(error)
+// }
 
 const deleteRemainSuccess = (data) => {
   // store.remain = data.remain
@@ -172,10 +172,10 @@ module.exports = {
   updateRemainFailure,
   getRemainsSuccess,
   getRemainsFailure,
-  getDynamicRemainsSuccess,
-  getDynamicRemainsFailure,
-  getOneDynamicRemainSuccess,
-  getOneDynamicRemainFailure,
+  // getDynamicRemainsSuccess,
+  // getDynamicRemainsFailure,
+  // getOneDynamicRemainSuccess,
+  // getOneDynamicRemainFailure,
   deleteRemainSuccess,
   deleteRemainFailure,
   getRemains

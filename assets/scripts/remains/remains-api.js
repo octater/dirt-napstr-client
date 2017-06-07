@@ -85,34 +85,34 @@ const deleteRemain = (id) => {
   })
 }
 
-const getDynamicRemains = function () {
-  return $.ajax({
-    url: config.apiOrigin + '/remains',
-    method: 'GET' // ,
-    // headers: {
-    //   Authorization: 'Token token=' + 'abc'
-    // }
-  })
-}
-
-const getOneDynamicRemain = (remainId) => {
-  return $.ajax({
-    url: config.apiOrigin + '/remains/' + remainId,
-    method: 'GET' // ,
-    // data: remainId // ,
-    // headers: {
-    //   Authorization: 'Token token=' + 'abc'
-    // }
-  })
-}
+// const getDynamicRemains = function () {
+//   return $.ajax({
+//     url: config.apiOrigin + '/remains',
+//     method: 'GET' // ,
+//     // headers: {
+//     //   Authorization: 'Token token=' + 'abc'
+//     // }
+//   })
+// }
+//
+// const getOneDynamicRemain = (remainId) => {
+//   return $.ajax({
+//     url: config.apiOrigin + '/remains/' + remainId,
+//     method: 'GET' // ,
+//     // data: remainId // ,
+//     // headers: {
+//     //   Authorization: 'Token token=' + 'abc'
+//     // }
+//   })
+// }
 
 // Exported since used in other code like events.js
 module.exports = {
   createRemain,
   getRemains,
   updateRemain,
-  deleteRemain,
+  deleteRemain
   // getResponses,
-  getDynamicRemains,
-  getOneDynamicRemain
+  // getDynamicRemains,
+  // getOneDynamicRemain
 }

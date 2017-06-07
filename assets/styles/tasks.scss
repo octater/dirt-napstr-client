@@ -1,49 +1,55 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Creepster');
 
 $dark-gray: #4e4e4e;
-$light-gray: #eeeeee;
+$light-gray: #eee;
 $container-width: 400px;
 $font-size: 70px;
 $font-family: 'Creepster', cursive;
 $dark-green: #3c763d;
+$red: #f00;
 
 .edit {
   box-sizing: border-box;
   font-family: $font-family;
 }
+
 .completed {
-  color: red;
+  color: $red;
   font-family: $font-family;
 }
 
-.task-buttons{
+.task-buttons {
   font-family: $font-family;
   padding-bottom: 20px;
 }
+
 .modal-header {
   background-color: $light-gray;
   border-color: $light-gray;
-  color: $dark-green;
-  text-align: center;
-  font-weight: bolder;
-  font-family: $font-family;
   border-radius: 6px;
+  // color: $dark-green;
+  font-family: $font-family;
+  font-weight: bolder;
+  text-align: center;
 }
 
 .jumbotron {
-  padding-top: 15px;
+
   font-family: $font-family;
-  color: $dark-green;
+  // color: $dark-green;
+  padding-top: 15px;
 }
 
 #add-task {
+  font-family: $font-family;
   font-size: 20px;
-  font-family: $font-family;
 }
+
 .task-name {
-  font-size: 17px;
   font-family: $font-family;
+  font-size: 17px;
   margin-left: 5px;
   padding: 5px;
 }

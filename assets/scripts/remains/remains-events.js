@@ -128,25 +128,25 @@ const onGetRemains = (event) => {
     .catch(ui.getRemainsFailure)
 }
 
-function getParameterByName () {
-  // print url
-  // console.log(window.location.href)
-  // true or false, there are parameters as indicated by a "?"
-  // console.log(window.location.href.split('?')[1] === undefined)
-  if (window.location.href.split('?')[1] === undefined) {
-    return ''
-  } else {
-    const arr = $.map(window.location.href.split('?')[1].split('&'), function (e, i) {
-      return e.split('=')[1]
-    })
-    // console.log('array: ', arr)
-    // console.log('remain_id: ', arr[1])
-    // console.log('parameters, will load Respondent Page')
-    return arr
-  }
-}
-// Give the parameter a variable name, to be passed to index.js
-const dynamicContent = getParameterByName()
+// function getParameterByName () {
+//   // print url
+//   // console.log(window.location.href)
+//   // true or false, there are parameters as indicated by a "?"
+//   // console.log(window.location.href.split('?')[1] === undefined)
+//   if (window.location.href.split('?')[1] === undefined) {
+//     return ''
+//   } else {
+//     const arr = $.map(window.location.href.split('?')[1].split('&'), function (e, i) {
+//       return e.split('=')[1]
+//     })
+//     // console.log('array: ', arr)
+//     // console.log('remain_id: ', arr[1])
+//     // console.log('parameters, will load Respondent Page')
+//     return arr
+//   }
+// }
+// // Give the parameter a variable name, to be passed to index.js
+// const dynamicContent = getParameterByName()
 
 const deleteItem = function () {
   event.preventDefault()
@@ -168,6 +168,7 @@ const addHandlers = () => {
 }
 
 module.exports = {
-  addHandlers,
-  dynamicContent
+  addHandlers
+  // addHandlers,
+  // dynamicContent
 }
