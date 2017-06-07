@@ -46,10 +46,29 @@ const getRemains = function () {
 const updateRemain = (data) => {
   // console.log('updateRemain(), token = ', store.user.token)
   // console.log('updateRemain(), data = ', data)
+
+  // console.log('updateRemain(), token = ', store.user.token)
+  // console.log('updateRemain(), data = ', data)
+  // console.log('updateRemain(), remain = ', data.remain)
+  console.log('updateRemain(), relationDesc = ', data.remain.relationDesc)
+
+  const remains = {
+    'remain': {
+      'given_name': data.remain.givenName,
+      'sur_name': data.remain.surName,
+      'entombment': data.remain.entombment,
+      'location': data.remain.location,
+      'comments': data.remain.comments,
+      'dob': data.remain.dob,
+      'dod': data.remain.dod,
+      'relation_desc': data.remain.relationDesc
+    }
+  }
+
   return $.ajax({
     url: config.apiOrigin + '/remains/' + data.remain.id,
     method: 'PATCH',
-    data: data,
+    data: remains,
     headers: {
       Authorization: 'Token token=' + store.user.token
     }

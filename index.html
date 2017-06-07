@@ -276,7 +276,7 @@
 
                 <form id="update-remain">
                 <fieldset>
-                  <div class="form-group">
+                  <!-- <div class="form-group">
                     <div class="col-sm-10 hideMe">
                       <span class="input-group-addon"  id="remain-id"></span>
                       <input type="text" name="remain[id]" id="remainId" class="form-control" hidden placeholder="Remain ID" aria-describedby="basic-addon1" required>
@@ -289,7 +289,60 @@
                         <span class="input-group-addon" id="remain-q1"></span>
                       <input type="text" name="remain[question]" id="remainQ1" class="form-control" placeholder="Question 1" aria-describedby="basic-addon1" required>
                     </div>
+                  </div>   -->
+
+                  <div class="form-group">
+                    <div class="col-sm-10 hideMe">
+                      <span class="input-group-addon"  id="update-id"></span>
+                      <input type="text" name="remain[id]" id="updateId" class="form-control" hidden placeholder="Remain ID" aria-describedby="basic-addon1" required>
+                    </div>
+                    <div class="col-sm-10">
+                      <span class="input-group-addon"  id="update-givenName">Given Name</span>
+                      <input type="text" name="remain[givenName]" id="updateGivenName" class="form-control" placeholder="Given Name" aria-describedby="basic-addon1" required>
+                    </div>
+                    <div class="col-sm-10">
+                        <span class="input-group-addon" id="update-surName">Sur Name</span>
+                      <input type="text" name="remain[surName]" id="updateSurName" class="form-control" placeholder="Sur Name" aria-describedby="basic-addon1" required>
+                    </div>
+
+                    <div class="col-sm-10">
+                      <span class="input-group-addon" id="update-entombment">Entombment</span>
+                      <select id="update-entombment-id" name="remain[entombment]" class="form-control" required>
+                        <option value="" disabled  hidden>Entombment Type</option>
+                        <option value="cemetary">cemetary</option>
+                        <option value="cremated">cremated</option>
+                        <option value="other">other</option>
+                      </select>
+                    </div>
+
+                    <div class="col-sm-10">
+                        <span class="input-group-addon" id="update-location">Location</span>
+                      <input type="text" name="remain[location]" id="updateLocation" class="form-control" placeholder="Location" aria-describedby="basic-addon1" required>
+                    </div>
+                    <div class="col-sm-10">
+                        <span class="input-group-addon" id="update-comments">Comments</span>
+                      <input type="text" name="remain[comments]" id="updateComments" class="form-control" placeholder="Comments" aria-describedby="basic-addon1" required>
+                    </div>
+                    <div class="col-sm-10">
+                        <span class="input-group-addon" id="update-dob">Date of birth</span>
+                      <input type="text" name="remain[dob]" id="updateDob" class="form-control" placeholder="Date of birth" aria-describedby="basic-addon1" required>
+                    </div>
+                    <div class="col-sm-10">
+                        <span class="input-group-addon" id="update-dod">Date of death</span>
+                      <input type="text" name="remain[dod]" id="updateDod" class="form-control" placeholder="Date of death" aria-describedby="basic-addon1" required>
+                    </div>
+                    <div class="col-sm-10">
+                        <span class="input-group-addon" id="update-relationDescription">Relationship Desc</span>
+                      <input type="text" name="remain[relationDesc]" id="updateRelationDesc" class="form-control" placeholder="Relationship Desc" aria-describedby="basic-addon1" required>
+                    </div>
+
+
+
                   </div>
+
+
+
+
                   <br>
                   <button type="submit" class="btn btn-primary" id= "update_remain">Update Remain</button>
                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

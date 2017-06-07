@@ -28,7 +28,7 @@ const onCreateRemain = function (event) {
 const onUpdateRemain = function (event) {
   event.preventDefault()
   const data = getFormFields(this)
-  // console.log('>>>>>>>>onUpdateRemain: data = ', data)
+  console.log('>>>>>>>>onUpdateRemain: data = ', data)
   api.updateRemain(data)
   .then(function (data) {
     ui.updateRemainSuccess(data)
@@ -47,16 +47,24 @@ const onUpdateRemain = function (event) {
 const updateItem = function () {
   event.preventDefault()
   const id = $(this).attr('data-id')
-  // console.log('updateItem() : id is: ' + id)
+  console.log('updateItem() : id is: ' + id)
+  console.log('store is: ', store)
   populateUpdateForm(id)
 }
 
 const populateUpdateForm = function (id) {
   const remain = findRemainById(id)
-  // console.log('>> remain.title is ', remain.title)
-  $('#remainId').val(remain.id)
-  $('#remainTitle').val(remain.title)
-  $('#remainQ1').val(remain.question)
+  console.log('>> remain returned is ', remain)
+  console.log('>> remain.entombmenbt returned is ', remain.entombment)
+  $('#updateId').val(remain.id)
+  $('#updateGivenName').val(remain.given_name)
+  $('#updateSurName').val(remain.sur_name)
+  $('#update-entombment').val(remain.entombment)
+  $('#updateLocation').val(remain.location)
+  $('#updateComments').val(remain.comments)
+  $('#updateDob').val(remain.dob)
+  $('#updateDod').val(remain.dod)
+  $('#updateRelationDesc').val(remain.relation_desc)
   onShowUpdateRemain()
 }
 
@@ -64,8 +72,17 @@ const findRemainById = function (idToCompare) {
   let result
   let i
   for (i in store.remains) {
-    const id = store.remains[i].id
-    if (id === idToCompare) {
+    // console.log('in findRemainById and i is: ', i)
+    const myObj = store.remains[i]
+    // console.log('in findRemainById and myObj is: ', myObj)
+    // console.log('in findRemainById and myObj.id is: ', myObj.id)
+    const id = myObj.id
+    // console.log('in findRemainById and id is: ', id)
+    // console.log('in findRemainById and store.remains[i] is: ', store.remains[i])
+    console.log('in findRemainById and id is: ', typeof id)
+    console.log('in findRemainById and idToCompare is: ', typeof idToCompare)
+
+    if (+id === +idToCompare) {
       return store.remains[i]
     }
   }
