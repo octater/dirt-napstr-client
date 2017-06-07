@@ -21,6 +21,10 @@ const createRemainSuccess = (data) => {
 }
 
 const createRemainFailure = (error) => {
+  $('#CreateRemainError').show().html('Check your values and please try again.')
+  setTimeout(function () {
+    $('#CreateRemainError').fadeOut(800)
+  }, 1000)
   console.error(error)
 }
 
@@ -32,6 +36,10 @@ const updateRemainSuccess = (data) => {
 
 const updateRemainFailure = (error) => {
   // console.log('updateRemainSuccess, error = ', error)
+  $('#UpdateRemainError').show().html('Check your values and please try again.')
+  setTimeout(function () {
+    $('#UpdateRemainError').fadeOut(800)
+  }, 1000)
   console.error(error)
 }
 
