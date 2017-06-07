@@ -277,20 +277,6 @@
 
                 <form id="update-remain">
                 <fieldset>
-                  <!-- <div class="form-group">
-                    <div class="col-sm-10 hideMe">
-                      <span class="input-group-addon"  id="remain-id"></span>
-                      <input type="text" name="remain[id]" id="remainId" class="form-control" hidden placeholder="Remain ID" aria-describedby="basic-addon1" required>
-                    </div>
-                    <div class="col-sm-10">
-                      <span class="input-group-addon"  id="remain-title"></span>
-                      <input type="text" name="remain[title]" id="remainTitle" class="form-control" placeholder="Remain Title" aria-describedby="basic-addon1" required>
-                    </div>
-                    <div class="col-sm-10">
-                        <span class="input-group-addon" id="remain-q1"></span>
-                      <input type="text" name="remain[question]" id="remainQ1" class="form-control" placeholder="Question 1" aria-describedby="basic-addon1" required>
-                    </div>
-                  </div>   -->
 
                   <div class="form-group">
                     <div class="col-sm-12 hideMe">
@@ -356,6 +342,80 @@
         <!-- responses content -->
           <div class="list-group" id ="responses-content"></div>
           <div class="list-group" id ="responses-content-text"></div>
+
+</div>
+
+<div id="viewRemain" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">View Remain</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="auth-alert">
+            <h3 id="ViewRemainError" class="form-error"></h3>
+          </div>
+          <div class="modal-body">
+
+            <form id="view-remain">
+            <fieldset>
+
+              <div class="form-group">
+                <div class="col-sm-12 hideMe">
+                  <span class="input-group-addon"  id="view-id"></span>
+                  <input type="text" name="remain[id]" id="viewId" class="form-control" hidden readonly placeholder="Remain ID" aria-describedby="basic-addon1" required>
+                </div>
+                <div class="col-sm-12">
+                  <span class="input-group-addon"  id="view-givenName">Given Name</span>
+                  <input type="text" name="remain[givenName]" id="viewGivenName" class="form-control" readonly placeholder="Given Name" aria-describedby="basic-addon1" required>
+                </div>
+                <div class="col-sm-12">
+                    <span class="input-group-addon" id="view-surName">Sur Name</span>
+                  <input type="text" name="remain[surName]" id="viewSurName" class="form-control" readonly placeholder="Sur Name" aria-describedby="basic-addon1" required>
+                </div>
+                <div class="col-sm-12">
+                    <span class="input-group-addon" id="view-entombment">Entombment Type</span>
+                  <input type="text" name="remain[entombment]" id="viewEntombment" class="form-control" readonly placeholder="Entombment" aria-describedby="basic-addon1" required>
+                </div>
+                <div class="col-sm-12">
+                    <span class="input-group-addon" id="view-location">Final Resting Place</span>
+                  <input type="text" name="remain[location]" id="viewLocation" class="form-control" readonly placeholder="Location" aria-describedby="basic-addon1" required>
+                </div>
+                <div class="col-sm-12">
+                    <span class="input-group-addon" id="view-comments">Final Resting Place Addl Comments</span>
+                  <input type="text" name="remain[comments]" id="viewComments" class="form-control" readonly placeholder="Comments" aria-describedby="basic-addon1" required>
+                </div>
+                <div class="col-sm-12">
+                    <span class="input-group-addon" id="view-dod">Date of Demise</span>
+                  <input type="date" name="remain[dod]" id="viewDod" class="form-control" readonly placeholder="Date of death" aria-describedby="basic-addon1" required>
+                </div>
+                <div class="col-sm-12">
+                    <span class="input-group-addon" id="view-relationDescription">Relationship Desc</span>
+                  <input type="text" name="remain[relationDesc]" id="viewRelationDesc" class="form-control" readonly placeholder="Relationship Desc" aria-describedby="basic-addon1" required>
+                </div>
+              </div>
+
+              <div class="padding"></div>
+
+              <button type="button" class="btn btn-resolved btn-block" data-dismiss="modal">Close</button>
+
+            </fieldset>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- remains content -->
+    <!-- remains content -->
+      <div class="list-group" id ="remains-content"></div>
+      <div class="list-group" id ="remains-content-text"></div>
+    <!-- responses content -->
+      <div class="list-group" id ="responses-content"></div>
+      <div class="list-group" id ="responses-content-text"></div>
 
 </div>
 <!-- End of default-content -->

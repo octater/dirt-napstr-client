@@ -45,6 +45,30 @@ const onUpdateRemain = function (event) {
   onGetRemains()
 }
 
+const viewItem = function () {
+  event.preventDefault()
+  const id = $(this).attr('data-id')
+  console.log('viewItem() : id is: ' + id)
+  console.log('store is: ', store)
+  populateViewForm(id)
+}
+
+const populateViewForm = function (id) {
+  const remain = findRemainById(id)
+  console.log('>> remain returned is ', remain)
+  console.log('>> remain.entombment returned is ', remain.entombment)
+  $('#viewId').val(remain.id)
+  $('#viewGivenName').val(remain.given_name)
+  $('#viewSurName').val(remain.sur_name)
+  $('#viewEntombment').val(remain.entombment)
+  $('#viewLocation').val(remain.location)
+  $('#viewComments').val(remain.comments)
+  $('#viewDob').val(remain.dob)
+  $('#viewDod').val(remain.dod)
+  $('#viewRelationDesc').val(remain.relation_desc)
+  onShowViewRemain()
+}
+
 const updateItem = function () {
   event.preventDefault()
   const id = $(this).attr('data-id')
@@ -88,6 +112,10 @@ const findRemainById = function (idToCompare) {
     }
   }
   result
+}
+
+const onShowViewRemain = function () {
+  $('#viewRemain').modal('show')
 }
 
 const onShowUpdateRemain = function () {
@@ -134,6 +162,7 @@ const addHandlers = () => {
   $('#create-remain').on('submit', onCreateRemain)
   $('#update-remain').on('submit', onUpdateRemain)
   $(document).on('click', '.update-remain', updateItem)
+  $(document).on('click', '.view-remain', viewItem)
   $(document).on('click', '#get-remain-button', onGetRemains)
   $(document).on('click', '.remove-remain', deleteItem)
 }
