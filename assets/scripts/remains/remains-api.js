@@ -7,7 +7,7 @@ const createRemain = (data) => {
   console.log('createRemain(), token = ', store.user.token)
   console.log('createRemain(), data = ', data)
   console.log('createRemain(), remain = ', data.remain)
-  console.log('createRemain(), given_name = ', data.remain.given_name)
+  console.log('createRemain(), givenName = ', data.remain.givenName)
 
   const remains = {
     'remain': {
@@ -16,7 +16,6 @@ const createRemain = (data) => {
       'entombment': data.remain.entombment,
       'location': data.remain.location,
       'comments': data.remain.comments,
-      'dob': data.remain.dob,
       'dod': data.remain.dod,
       'relation_desc': data.remain.relationDesc
     }
@@ -59,7 +58,6 @@ const updateRemain = (data) => {
       'entombment': data.remain.entombment,
       'location': data.remain.location,
       'comments': data.remain.comments,
-      'dob': data.remain.dob,
       'dod': data.remain.dod,
       'relation_desc': data.remain.relationDesc
     }

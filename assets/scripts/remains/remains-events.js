@@ -9,6 +9,7 @@ const store = require('../store')
 const onCreateRemain = function (event) {
   event.preventDefault()
   const data = getFormFields(this)
+
   api.createRemain(data)
   .then(function (data) {
     ui.createRemainSuccess(data)
@@ -59,7 +60,7 @@ const populateUpdateForm = function (id) {
   $('#updateId').val(remain.id)
   $('#updateGivenName').val(remain.given_name)
   $('#updateSurName').val(remain.sur_name)
-  $('#update-entombment').val(remain.entombment)
+  $('#update-entombment-id').val(remain.entombment)
   $('#updateLocation').val(remain.location)
   $('#updateComments').val(remain.comments)
   $('#updateDob').val(remain.dob)

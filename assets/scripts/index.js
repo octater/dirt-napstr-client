@@ -12,6 +12,22 @@ const ui = require('./remains/remains-ui')
 const responseEvents = require('./response/events')
 
 $(() => {
+  const dtToday = new Date()
+  let month = dtToday.getMonth() + 1
+  let day = dtToday.getDate()
+  const year = dtToday.getFullYear()
+  if (month < 10) {
+    month = '0' + month.toString()
+  }
+  if (day < 10) {
+    day = '0' + day.toString()
+  }
+  const maxDate = year + '-' + month + '-' + day
+  $('#updateDod').attr('max', maxDate)
+  $('#updateDob').attr('max', maxDate)
+  $('#dod').attr('max', maxDate)
+  $('#dob').attr('max', maxDate)
+
   setAPIOrigin(location, config)
   $('.form-control').val('')
   $('#add-task-modal').on('hidden.bs.modal', function () {

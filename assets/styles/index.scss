@@ -28,7 +28,11 @@ body {
   margin: auto;
   // opacity:0.5 !important;
   width: 550px;
-  background-image: url(../../images/background.jpg);
+  // background-image: url(../../images/111.jpg);
+  //   -webkit-background-size: cover;
+  //   -moz-background-size: cover;
+  //   -o-background-size: cover;
+  // background-size: cover;
 }
 
 #title-message {
@@ -209,7 +213,7 @@ body {
 }
 
 #remain-list-table {
-  // font-family: $font-family;
-  // font-size: 20px;
-  color: red;
+  font-family: $font-family;
+  font-size: 16px;
+  color: black;
 }
