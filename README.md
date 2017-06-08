@@ -22,7 +22,7 @@ be signed in before they can create/view/modify/delete their entries.
 
 ## APP Screenshot
 
-![APP](images/app.jpg)
+![Alt text](images/app.jpeg)
 
 ## Wireframe
 
@@ -72,7 +72,7 @@ time.
 No unsolved or known probles.  The only major hurdle was trying to remember
 rails after working with express.
 
-## Install Instructions / Major Hurdles
+## Install Instructions
 
 No special install instructions.
 
