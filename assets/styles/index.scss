@@ -13,6 +13,7 @@ $grey: #c0c0c0;
 $light-gray: #eee;
 $red: #f00;
 $black: #000;
+$white: #fff;
 
 html {
   background: url(../../images/111-2.jpg) no-repeat center center fixed;
@@ -37,6 +38,11 @@ body {
   font-family: $font-family;
   margin: auto;
   width: 550px;
+}
+
+#remain-list-table {
+  color: $black;
+  text-shadow: 3px 3px 8px $white;
 }
 
 #title-message {
@@ -193,6 +199,7 @@ body {
   font-family: $font-family;
   font-size: 20px;
   color: $black;
+  text-shadow: 3px 3px 8px $white;
 }
 
 .edit {

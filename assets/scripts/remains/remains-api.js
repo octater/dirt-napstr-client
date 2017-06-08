@@ -4,10 +4,10 @@ const config = require('../config')
 const store = require('../store')
 
 const createRemain = (data) => {
-  console.log('createRemain(), token = ', store.user.token)
-  console.log('createRemain(), data = ', data)
-  console.log('createRemain(), remain = ', data.remain)
-  console.log('createRemain(), givenName = ', data.remain.givenName)
+  // console.log('createRemain(), token = ', store.user.token)
+  // console.log('createRemain(), data = ', data)
+  // console.log('createRemain(), remain = ', data.remain)
+  // console.log('createRemain(), givenName = ', data.remain.givenName)
 
   const remains = {
     'remain': {
@@ -49,7 +49,7 @@ const updateRemain = (data) => {
   // console.log('updateRemain(), token = ', store.user.token)
   // console.log('updateRemain(), data = ', data)
   // console.log('updateRemain(), remain = ', data.remain)
-  console.log('updateRemain(), relationDesc = ', data.remain.relationDesc)
+  // console.log('updateRemain(), relationDesc = ', data.remain.relationDesc)
 
   const remains = {
     'remain': {

@@ -54,9 +54,9 @@ const updateRemainFailure = (error) => {
 const getRemainsSuccess = (data) => {
   $('#remains-content').hide()
   $('#remains-content-text').hide()
-  console.log(data)
-  console.log(data.remains)
-  console.log(data.remains.length)
+  // console.log(data)
+  // console.log(data.remains)
+  // console.log(data.remains.length)
   // if (data.remains.length !== undefined)
   if (data.remains[0] !== undefined) {
     // const showRemainsHtml = showRemainsTemplate({ remains: data.remains })
