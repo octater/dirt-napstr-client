@@ -9,7 +9,7 @@ $dark-gray: #4e4e4e;
 $dark-green: #3c763d;
 $font-family: 'Eater', cursive;
 $font-size: 70px;
-$grey: #eee;
+$grey: #c0c0c0;
 $light-gray: #eee;
 $red: #f00;
 $black: #000;
@@ -34,7 +34,6 @@ body {
   // color: #dfdfdf;
   background-color: transparent;
   font-color: #000000;
-  // font-color: $grey;
   font-family: $font-family;
   margin: auto;
   width: 550px;
@@ -43,6 +42,7 @@ body {
 #title-message {
   font-family: $font-family;
 }
+
 .jumbotron-msg {
   font-family: $font-family;
 }
@@ -145,7 +145,8 @@ body {
 }
 
 .blue-text {
-  color: #0000ff;
+  // color: #0000ff;
+  color: $black;
   font-family: $font-family;
 }
 

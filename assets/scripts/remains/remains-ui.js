@@ -59,8 +59,20 @@ const getRemainsSuccess = (data) => {
   console.log(data.remains.length)
   // if (data.remains.length !== undefined)
   if (data.remains[0] !== undefined) {
-    const showRemainsHtml = showRemainsTemplate({ remains: data.remains })
+    // const showRemainsHtml = showRemainsTemplate({ remains: data.remains })
+    // store.remains = data.remains
+    // // console.log('>>>>> store.remains = ', store.remains)
+    // $('#remains-content').show()
+    // $('.list-group').empty()
+    // $('#remains-content').html(showRemainsHtml)
+
     store.remains = data.remains
+    // Sort remains by ID so they are always in the same order.
+    data.remains.sort(function (a, b) {
+      return a.id - b.id
+    })
+    const showRemainsHtml = showRemainsTemplate({ remains: data.remains })
+
     // console.log('>>>>> store.remains = ', store.remains)
     $('#remains-content').show()
     $('.list-group').empty()
