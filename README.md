@@ -5,27 +5,28 @@
 
 ## Description
 
-More to come
+My capstone project was to build a gravesite tracker appliction.  A user must
+be signed in before they can create/view/modify/delete their entries.
 
 ## Project Links
 
 #### Back-End Deplpyed
-[ProjectApiDeployed]()
+[ProjectApiDeployed](https://octater-dirt-napstr-api.herokuapp.com/)
 #### Back-End Repo
-[ProjectApiRepo]()
+[ProjectApiRepo](https://github.com/octater/dirt-napstr-api)
 
 #### Front-End Deployed
-[ProjectClientDeployed]()
+[CapstoneClientDeployed](https://octater.github.io/dirt-napstr-client/)
 #### Front-End Repo
-[ProjectClientRepo]()
+[CapsonteClientRepo](https://github.com/octater/dirt-napstr-client)
 
-## ERD
+## APP Screenshot
 
-![ERD](images/ERD.png)
+![APP](images/app.jpg)
 
 ## Wireframe
 
-! [Wireframe](images/wireframe.jpg)
+![Wireframe](images/wireframe.jpg)
 
 ## User Stories
 
@@ -48,19 +49,32 @@ More to come
 -   Ajax
 -   Handlebars
 -   Heruko
--   More to come
+-   Ruby/Rails
+-   Postgres
 
 ## General Approach
 
-More to come
+As with all the previous projects, I first created the wireframe, user stories,
+and ERD. I decided early to use Postgres database and not MongoDB (nothing
+against MongoDB, but I felt this was better suited for a sql database).  From
+the ERD, I proceeded to get the basic backend tables generated.
+
+Working with it wireframe and user stories, I then started to get a working
+CRUD frontend app ready.  I started with the user functions then proceeded to
+the remains entries.
+
+Lastly, I tried to beautify the app.  This turned out to be more work than
+anticipated.  I wanted to use handlebars, a date picker, and a dropdown this
+time.
 
 ## Unsolved Problems or Major Hurdles
 
-More to come
+No unsolved or known probles.  The only major hurdle was trying to remember
+rails after working with express.
 
-## Install Instructions
+## Install Instructions / Major Hurdles
 
-N/A
+No special install instructions.
 
 ## [License](LICENSE)
 
