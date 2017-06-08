@@ -37,7 +37,8 @@ be signed in before they can create/view/modify/delete their entries.
 5. As a user, I want to create a gravesite so I can visit later.
 6. As a user, I want to update existing gravesite so that I can modify them.
 7. As a user, I want to delete a gravesite if it is no longer needed.
-8. As a user, I want to be able to view all my gravesite records.
+8. As a user, I want to be able to view a list containing name, entombment,
+    and DOD of all my gravesite records.
 
 
 ## Technologies
