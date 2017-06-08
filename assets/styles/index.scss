@@ -1,17 +1,19 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
-@import url('https://fonts.googleapis.com/css?family=Creepster');
+// @import url('https://fonts.googleapis.com/css?family=Eater');
+@import url('https://fonts.googleapis.com/css?family=Eater');
 
-$font-family: 'Creepster', cursive;
+
+$font-family: 'Eater', cursive;
 $grey: #eee;
 
-// html {
-//   background: url(../../images/background.jpg) no-repeat center center fixed;
-//   -webkit-background-size: cover;
-//   -moz-background-size: cover;
-//   -o-background-size: cover;
-//   background-size: cover;
-// }
+html {
+  background: url(../../images/111.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 // Hide the dynamic-content remain by default
 .dynamic-content {
     display:none;
@@ -19,18 +21,15 @@ $grey: #eee;
 }
 
 body {
+  // background-image: url(../../images/111.jpg);
+  // background-size: cover;
   // color: #dfdfdf;
+  background-color: transparent;
   font-color: #000000;
   // font-color: $grey;
   font-family: $font-family;
   margin: auto;
-  // opacity:0.5 !important;
   width: 550px;
-  // background-image: url(../../images/111.jpg);
-  //   -webkit-background-size: cover;
-  //   -moz-background-size: cover;
-  //   -o-background-size: cover;
-  // background-size: cover;
 }
 
 #title-message {
@@ -210,8 +209,9 @@ body {
   font-family: $font-family;
 }
 
-#remain-list-table {
+.list-group {
+  background-color: transparent;
   font-family: $font-family;
-  font-size: 16px;
+  // font-size: 16px;
   color: black;
 }

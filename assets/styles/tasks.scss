@@ -1,12 +1,13 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
-@import url('https://fonts.googleapis.com/css?family=Creepster');
+// @import url('https://fonts.googleapis.com/css?family=Eater');
+@import url('https://fonts.googleapis.com/css?family=Eater');
 
 $dark-gray: #4e4e4e;
 $light-gray: #eee;
-$container-width: 400px;
+// $container-width: 400px;
 $font-size: 70px;
-$font-family: 'Creepster', cursive;
+$font-family: 'Eater', cursive;
 $dark-green: #3c763d;
 $red: #f00;
 
@@ -36,7 +37,6 @@ $red: #f00;
 }
 
 .jumbotron {
-
   font-family: $font-family;
   // color: $dark-green;
   padding-top: 15px;
