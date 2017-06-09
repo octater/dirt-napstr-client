@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Dirt Napstr</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Do not add `link` tags unless you know what you are doing -->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags unless you know what you are doing -->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+  <!-- dynamic content scripts -->
+  <script src="//code.jquery.com/jquery-1.12.0.min.js" type="text/javascript"></script>
+  <!-- end dynamic content scripts -->
+</head>
+
+<body class="container">
+
+  <!-- Start the default content -->
+
+    <div id="1jumbotron-top" class="1jumbotron 1jumbotron-fluid  beforesignin">
+      <h2 id="title-message" class="title_message ">Dirt Napstr</h2>
+      <div class="1jumbotron-msg container push-spaces">
+        <!-- <p> -->
+      </div>
+    </div>
+
+
+    <!-- ========= Authentication Container ============ -->
+    <!-- SIGN IN -->
+    <div id="signInModal" class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="form-title ">
+            <h3 class="sign-in-msg form-header">Log-In</h3>
+          </div>
+        </div>
+        <div class="auth-alert">
+          <h3 id="signInError" class="form-error"></h3>
+        </div>
+        <div class="modal-body">
+
+          <form id="sign-in">
+            <div class="form-group blue-text">
+              <label for="name"> Email</label>
+              <input type="text" name="credentials[email]" class="form-control signInPaw" autocomplete="off" placeholder="Enter Email" required />
+              <label for="name">Password</label>
+              <input type="password" name="credentials[password]" class="form-control" autocomplete="off" placeholder="Password" required />
+            </div>
+            <div class="padding">
+              <button type="submit" name="submit" value="SignIn" class="btn btn-primary btn-block"> Submit</button>
+            </div>
+            <div class="modal-footer"></div>
+            <div id="register" class="form-subtext register">
+              <p>Not Registered ?
+                <span id="sign-up-form" class="form-link"><a href='#'>Sign Up Here</a></span>
+              </p>
+            </div>
+            <div class="modal-footer"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- SIGN UP -->
+    <div id="signUpModal" class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="form-title mdl-card__title">
+            <h3 class="form-header">Create New Account</h3>
+          </div>
+        </div>
+        <div class="auth-alert">
+          <h3 id="signUpError" class="form-error"></h3>
+          <h3 id="signUpSuccess" class="form-success"></h3>
+        </div>
+        <div class="modal-body">
+          <form id="sign-up">
+            <div class="form-group blue-text">
+              <label for="name">Email</label>
+              <input type="text" name="credentials[email]" class="form-control" autocomplete="off" placeholder="Email" required />
+              <label for="name">Password</label>
+              <input id="password1" type="password" name="credentials[password]" class="form-control" autocomplete="off" placeholder="Password" required />
+              <label for="name">Password Confirmation</label>
+              <input id="password2" type="password" name="credentials[password_confirmation]" class="form-control" autocomplete="off" placeholder="Confirm Password" required />
+              <!-- Password Validation (5/18) -->
+              <span id="confirmMessage" class="confirmMessage"></span>
+            </div>
+            <!-- Password Validation (5/18) -->
+            <button id="chpw-submit" type="submit" name="submit" value="SignUp" class="btn btn-primary btn-block">Submit</button>
+            <div class="modal-footer"></div>
+            <div class="form-subtext">
+              <p>Did you get here on accident ?
+                <span id="return-to-log-in" class="form-link"><a href='#'>Return to LogIn</a></span>
+              </p>
+            </div>
+            <div class="modal-footer"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Change Password Modal-->
+    <!-- <div id="add-task-modal" class="container-fluid"> -->
+
+    <div id="changePasswordModal" class="modal fade container-fluid" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="form-title mdl-card__title">
+              <h3 class="form-header">Change Your Password</h3>
+            </div>
+          </div>
+
+          <div class="auth-alert">
+            <h3 id="ChangePasswordError" class="form-error"></h3>
+            <h3 id="ChangePasswordSuccess" class="form-success"></h3>
+          </div>
+          <div class="modal-body">
+            <form id="change-password">
+              <fieldset>
+                <div class="form-group-pw blue-text">
+                  <label for="name">Old Password</label>
+                  <input type="password" name="passwords[old]" class="form-control" autocomplete="off" placeholder="Old Password" required />
+                  <label for="name">New Password</label>
+                  <input type="password" name="passwords[new]" class="form-control" autocomplete="off" placeholder="New Password" required />
+
+                  <div class="padding"></div>
+                  <button id="changePasswordSubmit" type="submit" name="submit" value="Change Password" class="btn btn-primary btn-block">Change Password</button>
+                </div>
+                <div class="padding"></div>
+                <button id="changePasswordModalClose" type="button" class="btn btn-resolved btn-block" data-dismiss="modal">Close</button>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Logout confirm-->
+
+    <div id="confirm-logout" class="modal fade confirm-logout-modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-content modal-header">
+
+        <div class="form-title mdl-card__title">
+          <h3 class="form-header">Are you sure you want to Log out ?</h3>
+        </div>
+
+        <div class="modal-footer">
+          <button id="sign-out" type="submit" name="submit" value="SignOut" class="btn btn-danger btn-sm  btn-block">SignOut</button>
+          <button type="button" data-dismiss="modal" class="btn btn-sm btn-block">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-btns align-center">
+
+      <button id="add-remain-button" type="button" class="btn btn-warn" data-toggle="modal" data-target="#createRemain">Create Entry</button>
+      <button id="get-remain-button" type="button" class="btn btn-warn" data-target="#">Get Entries</button>
+
+
+      <button id="LogOut" class="btn btn-warn align-center navbar-center" type="submit" name="submit" value="SignOut" data-toggle="modal" data-target=".confirm-logout-modal"> SignOut</button>
+
+      <!-- <button id="sign-out" type="submit"  name="submit" value="SignOut" class="btn btn-primary align-center navbar-center">SignOut</button> -->
+      <button id="change-password-modal" type="button" class="btn btn-warn navbar-center change-pw" data-toggle="modal" data-target="#changePasswordModal">Change Password</button>
+    </div>
+
+    <!-- END AUTHENTICATION MODALS  -->
+
+    <!-- <div class="create-a-remain">
+      <button id="add-remain-button" type="button" class="btn btn-warn" data-toggle="modal" data-target="#createRemain">Create Entry</button>
+    </div>
+
+    <div class="get-remains">
+      <button id="get-remain-button" type="button" class="btn btn-warn" data-target="#">Get Entries</button>
+    </div> -->
+
+    <!-- Create Remain Modal -->
+
+  </div>
+
+  <!-- Create Remain Modal -->
+  <div id="createRemain" class="modal fade container-fluid" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="form-title mdl-card__title">
+            <h3 class="form-header">Create Gravesite</h3>
+          </div>
+        </div>
+        <div class="auth-alert">
+          <h3 id="CreateRemainError" class="form-error"></h3>
+        </div>
+        <div class="modal-body">
+
+          <form id="create-remain" class="form-horizontal">
+            <fieldset>
+              <div class="input-group">
+                <div class="col-sm-12">
+                  <span class="input-group-addon " id="remain-given-name">Given Name</span>
+                  <input type="text" name="remain[givenName]" id="given-name" class="form-control" placeholder="Enter given name here ..." aria-describedby="basic-addon1" required>
+                </div>
+
+                <div class="col-sm-12">
+                  <span class="input-group-addon " id="remain-sur-name">Sur Name</span>
+                  <input type="text" name="remain[surName]" id="sur-name" class="form-control" placeholder="Enter sur name here ..." aria-describedby="basic-addon1" required>
+                </div>
+
+                <div class="col-sm-12">
+                  <span class="input-group-addon" id="remain-entombment">Entombment Type</span>
+                  <select id="entombment-type" name="remain[entombment]" class="form-control" required>
+                  <option value="" disabled  hidden>Select expected entombment type...</option>
+                  <option value="cemetary">cemetary</option>
+                  <option value="cremated">cremated</option>
+                  <option value="other">other</option>
+                </select>
+                </div>
+
+                <div class="col-sm-12">
+                  <span class="input-group-addon" id="remain-location">Final Resting Place</span>
+                  <input type="text" name="remain[location]" id="location" class="form-control" placeholder="Enter final resting place here ..." aria-describedby="basic-addon1" required>
+                </div>
+
+                <div class="col-sm-12">
+                  <span class="input-group-addon" id="remain-comments">Final Resting Place Addl Comments</span>
+                  <input type="text" name="remain[comments]" id="comments" class="form-control" placeholder="Enter any addl comments here ..." aria-describedby="basic-addon1" required>
+                </div>
+
+                <div class="col-sm-12">
+                  <span class="input-group-addon" id="remain-dod">Date of Demise</span>
+                  <input type="date" name="remain[dod]" id="dod" class="form-control" placeholder="Enter date of demise here ..." aria-describedby="basic-addon1" required>
+                </div>
+
+                <div class="col-sm-12">
+                  <span class="input-group-addon" id="remain-rel-desc">Relationship Desc</span>
+                  <input type="text" name="remain[relationDesc]" id="rel-desc" class="form-control" placeholder="Enter relationship description here ..." aria-describedby="basic-addon1" required>
+                </div>
+
+              </div>
+              <div class="padding"></div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="create_remain">Create Entry</button>
+              <div class="padding"></div>
+
+              <button type="button" class="btn btn-resolved btn-block" data-dismiss="modal">Close</button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- End of Create Remain Modal -->
+
+
+
+  <div id="updateRemain" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Update Remain</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+        </div>
+        <div class="auth-alert">
+          <h3 id="UpdateRemainError" class="form-error"></h3>
+        </div>
+        <div class="modal-body">
+
+          <form id="update-remain">
+            <fieldset>
+
+              <div class="form-group">
+                <div class="col-sm-12 hideMe">
+                  <span class="input-group-addon" id="update-id"></span>
+                  <input type="text" name="remain[id]" id="updateId" class="form-control" hidden placeholder="Remain ID" aria-describedby="basic-addon1" required>
+                </div>
+                <div class="col-sm-12">
+                  <span class="input-group-addon" id="update-givenName">Given Name</span>
+                  <input type="text" name="remain[givenName]" id="updateGivenName" class="form-control" placeholder="Given Name" aria-describedby="basic-addon1" required>
+                </div>
+                <div class="col-sm-12">
+                  <span class="input-group-addon" id="update-surName">Sur Name</span>
+                  <input type="text" name="remain[surName]" id="updateSurName" class="form-control" placeholder="Sur Name" aria-describedby="basic-addon1" required>
+                </div>
+
+                <div class="col-sm-12">
+                  <span class="input-group-addon" id="update-entombment">Entombment Type</span>
+                  <select id="update-entombment-id" name="remain[entombment]" class="form-control" required>
+                        <!-- <option value="" disabled  hidden>Entombment Type</option> -->
+                        <option disabled selected value >Entombment Type</option>
+                        <option value="cemetary">cemetary</option>
+                        <option value="cremated">cremated</option>
+                        <option value="other">other</option>
+                      </select>
+                </div>
+
+                <div class="col-sm-12">
+                  <span class="input-group-addon" id="update-location">Final Resting Place</span>
+                  <input type="text" name="remain[location]" id="updateLocation" class="form-control" placeholder="Location" aria-describedby="basic-addon1" required>
+                </div>
+                <div class="col-sm-12">
+                  <span class="input-group-addon" id="update-comments">Final Resting Place Addl Comments</span>
+                  <input type="text" name="remain[comments]" id="updateComments" class="form-control" placeholder="Comments" aria-describedby="basic-addon1" required>
+                </div>
+                <div class="col-sm-12">
+                  <span class="input-group-addon" id="update-dod">Date of Demise</span>
+                  <input type="date" name="remain[dod]" id="updateDod" class="form-control" placeholder="Date of death" aria-describedby="basic-addon1" required>
+                </div>
+                <div class="col-sm-12">
+                  <span class="input-group-addon" id="update-relationDescription">Relationship Desc</span>
+                  <input type="text" name="remain[relationDesc]" id="updateRelationDesc" class="form-control" placeholder="Relationship Desc" aria-describedby="basic-addon1" required>
+                </div>
+              </div>
+
+              <div class="padding"></div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="update_remain">Update Remain</button>
+              <div class="padding"></div>
+
+              <button type="button" class="btn btn-resolved btn-block" data-dismiss="modal">Close</button>
+
+            </fieldset>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="viewRemain" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">View Remain</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="auth-alert">
+          <h3 id="ViewRemainError" class="form-error"></h3>
+        </div>
+        <div class="modal-body">
+
+          <form id="view-remain">
+            <fieldset>
+
+              <div class="form-group">
+                <div class="col-sm-12 hideMe">
+                  <span class="input-group-addon" id="view-id"></span>
+                  <input type="text" name="remain[id]" id="viewId" class="form-control" hidden readonly placeholder="Remain ID" aria-describedby="basic-addon1" required>
+                </div>
+                <div class="col-sm-12">
+                  <span class="input-group-addon" id="view-givenName">Given Name</span>
+                  <input type="text" name="remain[givenName]" id="viewGivenName" class="form-control" readonly placeholder="Given Name" aria-describedby="basic-addon1" required>
+                </div>
+                <div class="col-sm-12">
+                  <span class="input-group-addon" id="view-surName">Sur Name</span>
+                  <input type="text" name="remain[surName]" id="viewSurName" class="form-control" readonly placeholder="Sur Name" aria-describedby="basic-addon1" required>
+                </div>
+                <div class="col-sm-12">
+                  <span class="input-group-addon" id="view-entombment">Entombment Type</span>
+                  <input type="text" name="remain[entombment]" id="viewEntombment" class="form-control" readonly placeholder="Entombment" aria-describedby="basic-addon1" required>
+                </div>
+                <div class="col-sm-12">
+                  <span class="input-group-addon" id="view-location">Final Resting Place</span>
+                  <input type="text" name="remain[location]" id="viewLocation" class="form-control" readonly placeholder="Location" aria-describedby="basic-addon1" required>
+                </div>
+                <div class="col-sm-12">
+                  <span class="input-group-addon" id="view-comments">Final Resting Place Addl Comments</span>
+                  <input type="text" name="remain[comments]" id="viewComments" class="form-control" readonly placeholder="Comments" aria-describedby="basic-addon1" required>
+                </div>
+                <div class="col-sm-12">
+                  <span class="input-group-addon" id="view-dod">Date of Demise</span>
+                  <input type="date" name="remain[dod]" id="viewDod" class="form-control" readonly placeholder="Date of death" aria-describedby="basic-addon1" required>
+                </div>
+                <div class="col-sm-12">
+                  <span class="input-group-addon" id="view-relationDescription">Relationship Desc</span>
+                  <input type="text" name="remain[relationDesc]" id="viewRelationDesc" class="form-control" readonly placeholder="Relationship Desc" aria-describedby="basic-addon1" required>
+                </div>
+              </div>
+
+              <div class="padding"></div>
+
+              <button type="button" class="btn btn-resolved btn-block" data-dismiss="modal">Close</button>
+
+            </fieldset>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- remains content -->
+
+  <div class="list-group" id="remains-content"></div>
+  <div class="list-group" id="remains-content-text"></div>
+
+  <!-- End of default-content -->
+
+</body>
+
+</html>
